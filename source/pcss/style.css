@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
+$theme-color: #Fe0204;
+
 .hoge {
   .fuga {
     display: flex;
+    background-color: $theme-color;
   }
 }

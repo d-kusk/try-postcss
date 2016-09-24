@@ -4,6 +4,7 @@ var postCss    = require('gulp-postcss');
 gulp.task('css', function() {
   gulp.src('source/pcss/*.css')
     .pipe(postCss([
+      require('postcss-simple-vars'),
       require('postcss-nested'),
       require('autoprefixer'),
       require('cssnano')
