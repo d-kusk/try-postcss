@@ -2,7 +2,10 @@ var gulp       = require('gulp');
 var postCss    = require('gulp-postcss');
 
 gulp.task('css', function() {
-  gulp.src('source/pcss/*.css')
+  gulp.src([
+      'source/pcss/*.css',
+      '!source/pcss/_*.css'
+    ])
     .pipe(postCss([
       require('postcss-easy-import')({
         glob: true
